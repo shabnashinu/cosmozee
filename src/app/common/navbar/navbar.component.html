@@ -1,0 +1,38 @@
+<nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 p-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        
+        <!-- First Div: Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="text-xl font-bold text-gray-900">COSMO<span class="font-thin">ZEE</span></a>
+        </div>
+        
+        <!-- Second Div: Navigation Links -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="text-gray-900 hover:text-gray-700 font-thin">ABOUT</a>
+          <a href="#" class="text-gray-900 hover:text-gray-700 font-thin">COLLECTIONS</a>
+          <a href="#" class="text-gray-900 hover:text-gray-700 font-thin">CONTACT US</a>
+          <a href="#" class="text-gray-900 hover:text-gray-700 font-thin">BLOGS</a>
+        </div>
+        
+        <!-- Third Div: Dropdown Icon -->
+        <div class="flex md:hidden">
+          <button type="button" class="text-gray-900 hover:text-gray-700 focus:outline-none"(click)="toggleDropdown()">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="md:hidden" [ngClass]="{'hidden': !isDropdownOpen}">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-700">ABOUT</a>
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-700">COLLECTIONS</a>
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-700">CONTACT US</a>
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-700">BLOGS</a>
+      </div>
+    </div>
+  </nav>
